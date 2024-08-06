@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+}
+
+.logo {
+  padding: 30px 30px;
+  display: flex;
+}
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.rhythm-pad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  transform: perspective(1000px) rotateX(5deg) rotateY(5deg);
+  transition: transform 0.5s;
+}
+
+.rhythm-pad:hover {
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+}
+
+.display {
+  background-color: #23a3cc;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.pads-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+}
+
+.pad-button {
+  background-color: #444;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  flex: 1 1 calc(50% - 20px);
+  max-width: 180px;
+  transform: translateZ(0);
+}
+
+.pad-button:hover {
+  background-color: #666;
+  transform: translateZ(20px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.pad-button:active {
+  background-color: #888;
+  transform: translateZ(10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.pad-button.active {
+  background-color: #23a3cc;
+  color: #1e1e1e;
+}
